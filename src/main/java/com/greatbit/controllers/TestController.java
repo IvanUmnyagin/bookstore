@@ -1,8 +1,10 @@
 package com.greatbit.controllers;
 
 import com.greatbit.models.BooksStorage;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.stream.Collectors;
 import static java.lang.String.format;
@@ -11,7 +13,7 @@ import static java.lang.String.format;
 @RequestMapping("/start")
 public class TestController {
 
-    @GetMapping("/")
+    @GetMapping("/test")
     public String index() {
         return "Greetings from Spring Boot!";
     }
@@ -22,6 +24,4 @@ public class TestController {
                 map(book -> format("%s - %s - %s </br>", book.getAuthor(), book.getName(), book.getPages())).
                 collect(Collectors.joining("</br>"));
     }
-
-
 }

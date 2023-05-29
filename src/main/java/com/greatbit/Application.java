@@ -10,9 +10,6 @@ public class Application {
 
     public static void main(String[] args) {
 
-        BooksStorage.getBooks().add(new Book("Учение Дона Хуана", "Карлос Кастанеда", 400));
-        BooksStorage.getBooks().add(new Book("Богатый папа, Бедный папа", "Роберт Киосаки", 300));
-
 
         SpringApplication.run(Application.class, args);
     }
